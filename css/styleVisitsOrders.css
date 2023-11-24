@@ -1,0 +1,120 @@
+.visit-card {
+    border: 10px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.visit-card h3 {
+    color: #333;
+}
+
+.visit-card p {
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.visit-card .badge {
+    font-size: 12px;
+}
+
+.visit-card .actions button {
+    margin-right: 4px;
+}
+
+.fechaVisita {
+    background-color: white !important;
+    position: relative !important;
+}
+
+.custom-select-sm {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.custom-select-sm:hover {
+    border-color: #6c757d;
+}
+
+.custom-select-sm:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.hr-plus {
+    border: none;
+    height: 2px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+.containerInput {
+    display: flex;
+    align-items: center;
+ }
+
+.input2{
+    width: 100px;
+    text-align: center;
+    height: 30px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: #4b2883;
+    color: #fff;
+    font-size: 16px;
+    height: 30px;
+}
+
+button:hover {
+    background-color: #B640C1;
+}
+
+#resta {
+    border-radius: 5px 0 0 5px;
+}
+
+#suma {
+     border-radius: 0 5px 5px 0;
+}
+
+#addDeliverBtn {
+    border-radius: 90%;
+    height: 30px;
+    width: 30px;
+    background-color: #4B2883;
+    transition: background-color 0.3s ease;
+}
+
+#addDeliverBtn:hover {
+    background-color: #B640C1;
+}
+
+/* Table */
+#tableDeliver{
+    margin-top: 3%;
+}
+
+#imgDeliver{
+    height: 70px;
+    width: 70px;
+}
+
+#deleteDeliverBtn {
+    border-radius: 90%;
+    height: 30px;
+    width: 30px;
+    background-color: #4B2883;
+    transition: background-color 0.3s ease;
+}
+
+#deleteDeliverBtn:hover {
+    background-color: #B640C1;
+}

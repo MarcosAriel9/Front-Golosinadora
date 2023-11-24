@@ -2,51 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visitas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
     <style>
-        .navbar {
-            border-bottom: 1px solid #ccc;
+        .visit-card {
+            border: 10px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        th, td {
-            text-align: center;
+        .visit-card h3 {
+            color: #333;
         }
 
-        .estado-en-proceso {
-            background-color: #007bff;
+        .visit-card p {
+            color: #666;
+            margin-bottom: 4px;
         }
 
-        .estado-aceptada {
-            background-color: #28a745;
+        .visit-card .badge {
+            font-size: 12px;
         }
 
-        .estado-completada {
-            background-color: #ffc107;
+        .visit-card .actions button {
+            margin-right: 4px;
         }
 
-        .estado-finalizada {
-            background-color: #dc3545;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
+        .fechaVisita {
+            background-color: white !important;
+            position: relative !important;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4B2883;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4b2883">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mi Tienda</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -62,13 +58,13 @@
                         <a class="nav-link" href="./products.html">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./delivers.html">Pedidos</a>
+                        <a class="nav-link" href="./orders.html">Pedidos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./delivers.html">Repartidores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./visits2.html">Visitas</a>
+                        <a class="nav-link" href="./visits.html">Visitas</a>
                     </li>
                 </ul>
             </div>
@@ -81,187 +77,101 @@
             <button class="btn btn-primary" data-toggle="modal" data-target="#registrarVisitaModal">
                 + Registrar Visita
             </button>
-        </div>
     </div>
 
     <div class="container mt-4">
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Repartidor</th>
-                    <th scope="col">Tienda</th>
-                    <th scope="col">Día y Hora de Visita</th>
-                    <th scope="col">Estado de Visita</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- La información aleatoria se generará aquí mediante JavaScript -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">Total de visitas:</td>
-                    <td>0</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="visit-card">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div style="border-radius: 50%; background-color: #4B2883; padding: 15px;">
+                                <img src="../assets/img/IconsVisits/iconHome.png" height="20px" width="20px">
+                            </div>
+                            <div style="margin-left: 10px;">
+                                <h3>La Calaverita de Azucar</h3>
+                                <p><strong>Repartidor:</strong> Marcos Ordoñez</p>
+                                <p><strong>Estado:</strong> <span class="badge badge-pill bg-danger" style="color: white;">Sin atender</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center justify-content-center" style="height: 100%; margin-top: 2%;">
+                            <br><br><p class="m-0"><i class="fas fa-calendar-alt"></i> <span class="visit-date">2023-11-16 9:00 AM</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Modal para registrar visita -->
-    <div class="modal fade" id="registrarVisitaModal" tabindex="-1" role="dialog"
-        aria-labelledby="registrarVisitaModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registrarVisitaModalLabel">Registrar Visita</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="visit-card">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div style="border-radius: 50%; background-color: #B640C1; padding: 15px;">
+                                <img src="../assets/img/IconsVisits/iconHome.png" height="20px" width="20px">
+                            </div>
+                            <div style="margin-left: 10px;">
+                                <h3>Ortega's Candys</h3>
+                                <p><strong>Repartidor:</strong> Obed Hurtado</p>
+                                <p><strong>Estado:</strong> <span class="badge badge-pill bg-warning" style="color: white;">Pendiente</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center justify-content-center" style="height: 100%; margin-top: 2%;">
+                            <br><br><p class="m-0"><i class="fas fa-calendar-alt"></i> <span class="visit-date">2023-11-16 9:00 AM</span></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <!-- Contenido del formulario de registro -->
-                    <form>
-                        <div class="form-group">
-                            <label for="repartidor">Repartidor:</label>
-                            <input type="text" class="form-control" id="repartidor"
-                                placeholder="Nombre del Repartidor">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="visit-card">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div style="border-radius: 50%; background-color: #4B2883; padding: 15px;">
+                                <img src="../assets/img/IconsVisits/iconHome.png" height="20px" width="20px">
+                            </div>
+                            <div style="margin-left: 10px;">
+                                <h3>Golosinadora</h3>
+                                <p><strong>Repartidor:</strong> Luis Pozo</p>
+                                <p><strong>Estado:</strong> <span class="badge badge-pill bg-primary" style="color: white;">Atendida</span></p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="tienda">Tienda:</label>
-                            <input type="text" class="form-control" id="tienda" placeholder="Nombre de la Tienda">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center" style="height: 100%; margin-top: 2%;">
+                            <br><br><p class="m-0"><i class="fas fa-calendar-alt"></i> <span class="visit-date">2023-11-16 9:00 AM</span></p>
                         </div>
-                        <div class="form-group">
-                            <label for="fecha">Fecha y Hora de Visita:</label>
-                            <input type="datetime-local" class="form-control" id="fecha">
-                        </div>
-                        <div class="form-group">
-                            <label for="estado">Estado de Visita:</label>
-                            <select class="form-control" id="estado">
-                                <option value="En Proceso">En Proceso</option>
-                                <option value="Aceptada">Aceptada</option>
-                                <option value="Completada">Completada</option>
-                                <option value="Finalizada">Finalizada</option>
-                            </select>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" onclick="registrarVisita()">Registrar</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="visit-card">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div style="border-radius: 50%; background-color: #B640C1; padding: 15px;">
+                                <img src="../assets/img/IconsVisits/iconHome.png" height="20px" width="20px">
+                            </div>
+                            <div style="margin-left: 10px;">
+                                <h3>Candy's Shop</h3>
+                                <p><strong>Repartidor:</strong> José Salgado</p>
+                                <p><strong>Estado:</strong> <span class="badge badge-pill bg-success" style="color: white;">Finalizada</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center justify-content-center" style="height: 100%; margin-top: 2%;">
+                            <br><br><p class="m-0"><i class="fas fa-calendar-alt"></i> <span class="visit-date">2023-11-16 9:00 AM</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modales para ver, editar y eliminar visita -->
-    <!-- Aquí debes agregar los modales correspondientes según tus necesidades -->
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        // Función para generar una fecha aleatoria en el rango de días especificado
-        function randomDate(start, end) {
-            return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-        }
-
-        // Función para generar información aleatoria y agregar filas a la tabla
-        function addRandomRows() {
-            const repartidores = ["Juan Pérez", "Ana García", "Pedro Ramirez", "Juan Pérez", "Ana García", "Pedro Ramirez"];
-            const tiendas = ["Tienda A", "Tienda B", "Tienda C", "Tienda D", "Tienda E", "Tienda F"];
-            const estados = ["En Proceso", "Aceptada", "Completada", "Finalizada", "Completada", "Finalizada"];
-
-            for (let i = 0; i < 6; i++) {
-                const repartidor = repartidores[Math.floor(Math.random() * repartidores.length)];
-                const tienda = tiendas[Math.floor(Math.random() * tiendas.length)];
-                const fecha = randomDate(new Date(2023, 10, 14), new Date());
-                const estado = estados[Math.floor(Math.random() * estados.length)];
-
-                const estadoClass =
-                    estado === "En Proceso" ? "estado-en-proceso" :
-                        estado === "Aceptada" ? "estado-aceptada" :
-                            estado === "Completada" ? "estado-completada" :
-                                estado === "Finalizada" ? "estado-finalizada" : "";
-
-                const newRow = `
-                    <tr>
-                        <td>${repartidor}</td>
-                        <td>${tienda}</td>
-                        <td>${fecha.toLocaleString()}</td>
-                        <td><span class="badge ${estadoClass}">${estado}</span></td>
-                        <td>
-                            <button type="button" class="btn btn-success" data-toggle="modal"
-                                data-target="#verVisitaModal">
-                                <i class="faas fa-eye"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#editarVisitaModal">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger" data-toggle="modal"
-                                data-target="#eliminarVisitaModal">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                    </tr>
-                `;
-
-                document.querySelector('tbody').innerHTML += newRow;
-            }
-
-            const totalVisitas = document.querySelectorAll('tbody tr').length;
-            document.querySelector('tfoot td:last-child').textContent = totalVisitas;
-        }
-
-        // Función para registrar una visita desde el formulario del modal
-        function registrarVisita() {
-            const repartidor = document.getElementById('repartidor').value;
-            const tienda = document.getElementById('tienda').value;
-            const fecha = new Date(document.getElementById('fecha').value);
-            const estado = document.getElementById('estado').value;
-
-            const estadoClass =
-                estado === "En Proceso" ? "estado-en-proceso" :
-                    estado === "Aceptada" ? "estado-aceptada" :
-                        estado === "Completada" ? "estado-completada" :
-                            estado === "Finalizada" ? "estado-finalizada" : "";
-
-            const newRow = `
-                <tr>
-                    <td>${repartidor}</td>
-                    <td>${tienda}</td>
-                    <td>${fecha.toLocaleString()}</td>
-                    <td><span class="badge ${estadoClass}">${estado}</span></td>
-                    <td>
-                        <button type="button" class="btn btn-success" data-toggle="modal"
-                            data-target="#verVisitaModal">
-                            <i class="faas fa-eye"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#editarVisitaModal">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#eliminarVisitaModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </td>
-                </tr>
-            `;
-
-            document.querySelector('tbody').innerHTML += newRow;
-
-            // Actualiza el total de visitas
-            const totalVisitas = document.querySelectorAll('tbody tr').length;
-            document.querySelector('tfoot td:last-child').textContent = totalVisitas;
-
-            // Cierra el modal
-            $('#registrarVisitaModal').modal('hide');
-        }
-
-        addRandomRows();
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
