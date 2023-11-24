@@ -1,189 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedidos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        .visit-card {
-            border: 10px solid #ccc;
-            border-radius: 8px;
-            padding: 12px;
-            margin: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pedidos</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="../css/styleVisitsOrders.css">
+    </head>
 
-        .visit-card h3 {
-            color: #333;
-        }
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark"
+            style="background-color: #4b2883">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mi Tienda</a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./store.html">Tiendas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./orders.html">Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./delivers.html">Repartidores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./visits.html">Visitas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        .visit-card p {
-            color: #666;
-            margin-bottom: 4px;
-        }
-
-        .visit-card .badge {
-            font-size: 12px;
-        }
-
-        .visit-card .actions button {
-            margin-right: 4px;
-        }
-
-        .fechaVisita {
-            background-color: white !important;
-            position: relative !important;
-        }
-
-        .custom-select-sm {
-            width: 100%; /* ajusta el ancho según tus preferencias */
-            height: 40px;
-            border-radius: 8px;
-            border: 1px solid #ced4da;
-            padding: 8px;
-            font-size: 14px;
-        }
-
-        .custom-select-sm:hover {
-            border-color: #6c757d;
-        }
-
-        .custom-select-sm:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
-        }
-
-        .hr-plus {
-            border: none;
-            height: 2px;
-            background-color: #333; /* Cambia el color de la línea si lo deseas */
-            margin: 20px 0;
-        }
-        
-        /* Estilos para el contenedor del contador */
-        .counter-container {
-            display: flex;
-            align-items: center;
-            width: 150px;
-            margin: 20px;
-        }
-
-        /* Estilos para el input del contador */
-        .counter-input {
-            flex: 1; /* Toma todo el espacio disponible */
-            text-align: center;
-            font-size: 16px;
-            margin: 0 8px; /* Añade un pequeño margen entre el input y los botones */
-            height: 30px; /* Establece la altura deseada */
-        }
-
-        /* Estilos para los botones */
-        .counter-button {
-            cursor: pointer;
-            flex: 0; /* No toma espacio adicional, mantiene el mismo tamaño */
-            font-size: 18px;
-            padding: 8px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            height: 30px; /* Establece la misma altura que el input */
-            line-height: 30px; /* Centra el texto verticalmente */
-        }
-    </style>
-</head>
-
-<body>
-    
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4b2883">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mi Tienda</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./store.html">Tiendas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./products.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./orders.html">Pedidos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./delivers.html">Repartidores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./visits.html">Visitas</a>
-                    </li>
-                </ul>
+        <div class="container mt-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="mb-0">Pedidos</h1>
             </div>
         </div>
-    </nav>
 
-    <div class="container mt-3">
-        <div class="d-flex justify-content-between align-items-center">
-            <h1 class="mb-0">Pedidos</h1>
-        </div>
-    </div>
-    
-    <div class="container mt-4">    
+        <div class="container mt-4">
             <form>
                 <div class="row">
                     <div class="col-md-6">
-                            <label class="form-label">Tienda:</label><br>
-                            <select class="form-select custom-select-sm" aria-label=".form-select-sm example">
-                                <option selected disabled>Elija una opción</option>
-                                <option value="1">La Calaverita de Azucar</option>
-                                <option value="2">Ortega's Candys</option>
-                                <option value="3">Golosinadora</option>
-                                <option value="4">Candy's Shop</option>
-                            </select>  
+                        <label class="form-label">Tienda:</label><br>
+                        <select class="form-select custom-select-sm"
+                            aria-label=".form-select-sm example">
+                            <option selected disabled>Elija una opción</option>
+                            <option value="1">La Calaverita de Azucar</option>
+                            <option value="2">Ortega's Candys</option>
+                            <option value="3">Golosinadora</option>
+                            <option value="4">Candy's Shop</option>
+                        </select>
                     </div>
 
                     <div class="col-md-6">
-                            <label for="exampleInputEmail1" class="form-label">Próxima visita:</label>
-                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1" class="form-label">Próxima
+                            visita:</label>
+                        <input type="date" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center" style="margin-top: 30px;">
+                <div class="d-flex justify-content-between align-items-center"
+                    style="margin-top: 30px;">
                     <h3 class="mb-0">Pedidos</h3>
                 </div>
-                
+
                 <hr class="hr-plus">
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <label class="form-label">Productos:</label><br>
-                        <select class="form-select custom-select-sm" aria-label=".form-select-sm example">
+                        <select class="form-select custom-select-sm"
+                            aria-label=".form-select-sm example">
                             <option selected disabled>Elija una opción</option>
                             <option value="1">Paleta Payaso</option>
                             <option value="2">Lucas Muecas</option>
                             <option value="3">Carlos V</option>
                             <option value="4">Kinder Delice</option>
-                        </select>  
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <br>
+                        <div class="containerInput">
+                            <button id="resta">-</button>
+                            <input class="input2" type="text" value="0">
+                            <button id="suma">+</button>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <br>
+                        <button id="addDeliverBtn">
+                            <strong><i
+                                    class="fas fa-plus"></i>
+                            </strong>
+                        </button>
+                    </div>
+
                 </div>
 
-                <div class="counter-container">
-                    <button class="counter-button">-</button>
-                    <input class="counter-input" type="text" value="0" id="counter" readonly>
-                    <button class="counter-button">+</button>
+                <!-- TABLA -->
+                <div class="row" id="tableDeliver">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Total</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <img id="imgDeliver"
+                                        src="https://dulceriatobi.shop/cdn/shop/products/8000500267103_KinderDelice10Piezas390g4_jpg.png?v=1672777804&width=1445">
+                                </td>
+                                <td style="vertical-align: middle;">Kinder Delice</td>
+                                <td style="vertical-align: middle;">23</td>
+                                <td style="vertical-align: middle;">$550.00</td>
+                                <td style="vertical-align: middle;">
+                                    <button id="deleteDeliverBtn">
+                                        <strong><i
+                                                class="fas fa-x"></i>
+                                        </strong>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <img id="imgDeliver"
+                                        src="https://dulcesbalu.mx/cdn/shop/products/Super-Dulces-min-bubulubu-25-piezas-pieza.png?v=1677252385">
+                                </td>
+                                <td style="vertical-align: middle;">Bubulubus</td>
+                                <td style="vertical-align: middle;">100</td>
+                                <td style="vertical-align: middle;">$250.50</td>
+                                <td style="vertical-align: middle;">
+                                    <button id="deleteDeliverBtn">
+                                        <strong><i
+                                                class="fas fa-x"></i>
+                                        </strong>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                </div>
+
             </form>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
 
 </html>
